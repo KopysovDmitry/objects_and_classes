@@ -18,7 +18,7 @@ public class Main {
         System.out.println("western.getAutorFirstName() = " + westernBook.getAutorFirstName());
         System.out.println("western.getAutorLastName() = " + westernBook.getAutorLastName());
 
-        Book western = new Book("wild west",1890);
+        Book western = new Book("wild west",1890,westernBook);
         System.out.println("western.getName() = " + western.getName());
         System.out.println("western.getYear() = " + western.getYear());
     }
