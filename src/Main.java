@@ -1,13 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Autor bibleAutor = new Autor("Lev","Tolstoy");
-        System.out.println("bibleAutor.getAutorFirstName() = " + bibleAutor.getAutorFirstName());
-        System.out.println("bibleAutor.getAutorLastName() = " + bibleAutor.getAutorLastName());
+        Autor bibleAutor = new Autor("Lev", "Tolstoy");
+        //bibleAutor.setAutorLastName("Lev");
+
 
         Book holybook = new Book("Holybook", 2022, bibleAutor);
-        System.out.println("holybook.name = " + holybook.getName());
-        System.out.println("holybook.year = " + holybook.getYear());
-        System.out.println("holybook.getAutorName() = " + holybook.getAutorName());
+        System.out.println(holybook);
 
 
         holybook.setYear(2023);
@@ -15,11 +13,18 @@ public class Main {
 
 
         Autor westernBook = new Autor("John", "Wein");
-        System.out.println("western.getAutorFirstName() = " + westernBook.getAutorFirstName());
-        System.out.println("western.getAutorLastName() = " + westernBook.getAutorLastName());
 
-        Book western = new Book("wild west",1890,westernBook);
-        System.out.println("western.getName() = " + western.getName());
-        System.out.println("western.getYear() = " + western.getYear());
+
+        Book western = new Book("wild west", 1890, westernBook);
+        System.out.println(western);
+
+        if (holybook.equals(western)) {
+            System.out.println("Книги одинаковые");
+        } else {
+            System.out.println("Это две разные книги");
+        }
+        System.out.println(holybook.equals(western));
+        System.out.println(bibleAutor.equals(westernBook));
+
     }
 }
